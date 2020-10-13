@@ -26,7 +26,7 @@ var RandomNumber = function() {
 
             var number = parseInt(hex, 16);
 
-            return this.padLeadingZeros(number, 5);
+            return padLeadingZeros(number, 5);
         }
     }
 }
