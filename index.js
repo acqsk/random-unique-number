@@ -18,7 +18,11 @@ var RandomNumber = function() {
             }
             return result;
         },
-        getUnique: function() {
+        getUnique: function(length = 5) {
+            if(length < 5) {
+                throw new Error('Number length must be >= 5');
+            }
+
             var dateString = new Date().toISOString();
             var randString = Math.floor(Math.random() * 10000);
         
@@ -26,7 +30,11 @@ var RandomNumber = function() {
 
             var number = parseInt(hex, 16);
 
-            return padLeadingZeros(number, 5);
+            if(length > 5) {
+                number = this.getRandom(length - 5)+''+number;
+            }
+
+            return padLeadingZeros(number, length - 5);
         }
     }
 }
