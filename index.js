@@ -34,7 +34,7 @@ var RandomNumber = function() {
                 number = this.getRandom(length - 5)+''+number;
             }
 
-            return padLeadingZeros(number, length - 5);
+            return padLeadingZeros(number, length);
         }
     }
 }
