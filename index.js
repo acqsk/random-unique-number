@@ -1,6 +1,6 @@
 var crc16 = require('node-crc16');
 
-var randomNumber = function() {
+var RandomNumber = function() {
 
     function padLeadingZeros(num, size) {
         var s = num+"";
@@ -30,3 +30,5 @@ var randomNumber = function() {
         }
     }
 }
+
+export default RandomNumber();
