@@ -29,7 +29,7 @@ var RandomNumber = function() {
                 miliseconds = miliseconds + this.getRandom(length - miliseconds.length);
             }
 
-            return padLeadingZeros(number, length);
+            return padLeadingZeros(miliseconds, length);
         }
     }
 }
