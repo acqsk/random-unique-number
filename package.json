@@ -1,0 +1,28 @@
+{
+  "name": "random-unique-number",
+  "version": "1.0.0",
+  "description": "Generate random unique number",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acqsk/random-unique-number.git"
+  },
+  "keywords": [
+    "random",
+    "number",
+    "unique",
+    "integer"
+  ],
+  "author": "ACQSK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acqsk/random-unique-number/issues"
+  },
+  "homepage": "https://github.com/acqsk/random-unique-number#readme",
+  "dependencies": {
+    "node-crc16": "^2.0.7"
+  }
+}
