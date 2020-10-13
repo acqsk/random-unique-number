@@ -1,6 +1,6 @@
 {
   "name": "random-unique-number",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Generate random unique number",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,5 @@
   },
   "homepage": "https://github.com/acqsk/random-unique-number#readme",
   "dependencies": {
-    "node-crc16": "^2.0.7"
   }
 }

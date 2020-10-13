@@ -1,5 +1,3 @@
-var crc16 = require('node-crc16');
-
 var RandomNumber = function() {
 
     function padLeadingZeros(num, size) {
@@ -23,15 +21,12 @@ var RandomNumber = function() {
                 throw new Error('Number length must be >= 5');
             }
 
-            var dateString = new Date().toISOString();
-            var randString = Math.floor(Math.random() * 10000);
-        
-            var hex = crc16.checkSum(dateString + randString, 'utf-8');
+            var miliseconds = new Date().getTime().toString();
 
-            var number = parseInt(hex, 16);
-
-            if(length > 5) {
-                number = this.getRandom(length - 5)+''+number;
+            if(length < miliseconds.length) {
+                miliseconds = miliseconds.substring(miliseconds.length - length);
+            } else if(length > miliseconds.length) {
+                miliseconds = miliseconds + this.getRandom(length - miliseconds.length);
             }
 
             return padLeadingZeros(number, length);
